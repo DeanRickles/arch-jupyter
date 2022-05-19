@@ -12,7 +12,7 @@ RUN jupyter lab build --minimize=False
 
 # Preset aguments. (pip, git+gh)
 ARG PACMAN_ARGS="python-pip  glu npm nodejs git github-cli aspnet-runtime dotnet-runtime" \
-    PIP_ARGS="Matplotlib numpy pillow opencv-python jupyterlab-git jupyterlab-kite"
+    PIP_ARGS="ipython_genutils Matplotlib numpy pillow opencv-python jupyterlab-git"
 
 # Install packages.
 RUN pacman --noconfirm -Syyu $PACMAN_ARGS && pip install --no-input $PIP_ARGS
